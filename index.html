@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">HMU PDF Downloader</h1>
+    <form method="POST" action="{{ url_for('index') }}">
+        <div class="mb-3">
+            <label for="start_page" class="form-label">Start Page</label>
+            <input type="number" class="form-control" id="start_page" name="start_page" required>
+        </div>
+        <div class="mb-3">
+            <label for="end_page" class="form-label">End Page</label>
+            <input type="number" class="form-control" id="end_page" name="end_page" required>
+        </div>
+        <div class="mb-3">
+            <label for="url" class="form-label">Document URL</label>
+            <input type="url" class="form-control" id="url" name="url" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Download PDF</button>
+    </form>
+</div>
+{% endblock %}
